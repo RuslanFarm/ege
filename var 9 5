@@ -1,0 +1,12 @@
+c = 0
+for i in range(800, 901):
+    f = i // 100
+    s = i // 10 % 10
+    t = i % 10
+    mm = max(f,s,t)
+    mi = min(f,s,t)
+    p1 = int(str(mm) + str(f+s+t - mm - mi))
+    p2 = int(str(mi) + str(f+s+t - mm - mi))
+    if p1 - p2 == 30:
+        c += 1
+print(c)

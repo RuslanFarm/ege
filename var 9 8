@@ -1,0 +1,8 @@
+from itertools import combinations, product, permutations
+c = 0
+for i in permutations('МАРИ'):
+    i = list(i)
+    for j in product('ИНА', repeat=4):
+        sp = i + list(j)
+        c += 1
+        if c == 1078:print(sp)
